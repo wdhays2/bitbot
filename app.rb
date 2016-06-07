@@ -4,8 +4,6 @@ require 'sinatra'
 require 'httparty'
 require 'json'
 
-heroku config:set SLACK_TOKEN=hpgHDD26xC9RqpBXLQ0sHvaU
-
 post '/process_command' do
   return if params[:token] != ENV['SLACK_TOKEN']
 
