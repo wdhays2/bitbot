@@ -14,7 +14,7 @@ post '/price' do
     when 'price'
       resp = HTTParty.get(spot_price_url)
       resp = JSON.parse resp.body
-      respond_message "The current Bitcoin spot price is $#{resp['data']['amount']} #{resp['data']['currency']}."
+      respond_message "#{resp}"
   end
 end
 
