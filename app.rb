@@ -4,7 +4,7 @@ require 'sinatra'
 require 'httparty'
 require 'json'
 
-post '/process_command' do
+post '/price' do
   return if params[:token] != ENV['SLACK_TOKEN']
 
   text = params[:text]
