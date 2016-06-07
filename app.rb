@@ -8,7 +8,7 @@ post '/price' do
   return if params[:token] != ENV['SLACK_TOKEN']
 
   text = params[:text]
-  spot_price_url = 'https://api.coinbase.com/v2/prices/spot'
+  spot_price_url = 'http://www.omdbapi.com/?t=%22Jurassic%20Park%22'
 
   case text
     when 'price'
